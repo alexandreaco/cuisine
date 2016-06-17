@@ -1,0 +1,41 @@
+{
+  "name": "cuisine",
+  "version": "1.0.0",
+  "description": "waste less food",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "webpack-dev-server --inline --hot",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandreaco/tabular.git"
+  },
+  "author": "Alexandrea Defreitas @_alexdef",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandreaco/tabular/issues"
+  },
+  "homepage": "https://github.com/alexandreaco/tabular#readme",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.9.1",
+    "css-loader": "^0.23.1",
+    "jquery": "^2.2.4",
+    "node-sass": "^3.7.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1"
+  }
+}
