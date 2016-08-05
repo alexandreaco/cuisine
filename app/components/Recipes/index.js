@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import RecipesList from './RecipesList';
 import ActiveRecipe from './ActiveRecipe';
+import RecipeButtons from './RecipeButtons';
 
 import { getRecipes, setActiveRecipe } from '../../actions';
 
@@ -17,14 +18,17 @@ class Recipes extends Component {
   }
 
   render() {
-    const { recipes } = this.props;
+    const { recipes, view } = this.props;
     return (
       <div className="recipes">
         <div className="recipes__header">
           <h1>Recipes</h1>
         </div>
         <RecipesList recipes={recipes} />
-        <ActiveRecipe />
+          <div className="recipes__actionArea">
+            <RecipeButtons />
+            { view != 'addRecipe' && <ActiveRecipe /> }
+          </div>
       </div>
     )
   }
@@ -32,4 +36,5 @@ class Recipes extends Component {
 
 export default connect(state => ({
   recipes: state.recipes,
+  view: state.view,
 }))(Recipes);
