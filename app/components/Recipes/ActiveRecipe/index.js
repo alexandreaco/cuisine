@@ -9,14 +9,18 @@ class ActiveRecipe extends Component {
     super();
   }
 
+  willReceiveNewProps() {
+    console.log(this.props.activeRecipe)
+  }
+
   render() {
-    const { recipe } = this.props;
+    const { activeRecipe } = this.props;
     return (
       <div className="recipe__active">
-        <div className="recipe__name">{ recipe.name }</div>
-        <div className="recipe__content">{ recipe.content }</div>
+        <div className="recipe__name">{ activeRecipe.name }</div>
+        <div className="recipe__content">{ activeRecipe.content }</div>
         <div className="recipe__ingredients">
-          {this.props.recipe.ingredients.map(function(ingredient) {
+          {activeRecipe.ingredients && activeRecipe.ingredients.map(function(ingredient) {
             return (
               <StaticIngredient
                 key={ ingredient._id }
@@ -32,4 +36,6 @@ class ActiveRecipe extends Component {
   }
 }
 
-export default connect()(ActiveRecipe);
+export default connect(state => ({
+  activeRecipe: state.activeRecipe,
+}))(ActiveRecipe);

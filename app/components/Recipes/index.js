@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import RecipesList from './RecipesList';
 import ActiveRecipe from './ActiveRecipe';
 
-import { getRecipes } from '../../actions';
+import { getRecipes, setActiveRecipe } from '../../actions';
 
 class Recipes extends Component {
 
@@ -23,8 +23,8 @@ class Recipes extends Component {
         <div className="recipes__header">
           <h1>Recipes</h1>
         </div>
-        <RecipesList recipes={recipes}/>
-        { recipes[0] && <ActiveRecipe recipe={recipes[0]}/> }
+        <RecipesList recipes={recipes} />
+        <ActiveRecipe />
       </div>
     )
   }
