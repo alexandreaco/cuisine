@@ -1,0 +1,99 @@
+.ingredient__listItem {
+  position: relative;
+  padding: 0 50px 0 0;
+}
+
+.ingredient {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.ingredient__name {
+  flex: 1;
+}
+
+.ingredient__info {
+  display: flex;
+  text-align: right;
+}
+
+.ingredient__type {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: '';
+    border: 2px solid $color-text;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+  }
+
+}
+
+.ingredient__type--undecided {
+  @extend .ingredient__type;
+  &::before {
+    background-color: transparentize($color-gray, 0.33);
+  }
+}
+
+.ingredient__type--produce {
+  @extend .ingredient__type;
+  &::before {
+    background-color: transparentize($color-produce, 0.33);
+  }
+}
+
+.ingredient__type--grain {
+  @extend .ingredient__type;
+  &::before {
+    background-color: transparentize($color-grain, 0.33);
+  }
+}
+
+.ingredient__type--meat {
+  @extend .ingredient__type;
+  &::before {
+    background-color: transparentize($color-meat, 0.33);
+  }
+}
+
+.ingredient__type--fish {
+  @extend .ingredient__type;
+  &::before {
+    background-color: transparentize($color-fish, 0.33);
+  }
+}
+
+.ingredient__type--pantry {
+  @extend .ingredient__type;
+  &::before {
+    background-color: transparentize($color-pantry, 0.33);
+  }
+}
+
+.ingredient__actions {
+  background-color: $color-gray--light;
+  border: 1px solid $color-border;
+  border-radius: 2px;
+  padding: 5px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

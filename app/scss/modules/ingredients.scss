@@ -1,0 +1,21 @@
+.ingredients {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ingredients__header {
+  // display: flex;
+  // justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.ingredients__list {
+  padding: 60px 0;
+  width: 47%;
+  margin-right: 6%;
+}
+
+.ingredient__new {
+  width: 47%;
+}
