@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import Recipe from '../Recipe';
 import { getRecipes } from '../../../actions';
 
 class RecipesList extends Component {
@@ -14,13 +15,18 @@ class RecipesList extends Component {
   }
 
   render() {
-    console.info(this.props.recipes);
     return (
-    <div className="recipes__list">
-      {this.props.recipes.map(function(recipe) {
-        return recipe.name;
-      })}
-    </div>
+      <div className="recipes__list">
+        {this.props.recipes.map(function(recipe) {
+          return (
+            <Recipe
+              key={recipe._id}
+              name={recipe.name}
+              content={recipe.content}
+            />
+          );
+        })}
+      </div>
     );
   }
 }
