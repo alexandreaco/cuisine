@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import MealPlan from '../MealPlan';
 import Navigation from './Navigation';
+import Recipes from '../Recipes';
+
 class App extends Component {
 
   constructor() {
@@ -16,6 +18,7 @@ class App extends Component {
         <h1>Hello!</h1>
         <Navigation />
         { section == 'mealPlan' && <MealPlan /> }
+        { section == 'recipes' && <Recipes /> }
       </div>
     )
   }
