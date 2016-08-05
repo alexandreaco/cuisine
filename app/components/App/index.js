@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import Ingredients from '../Ingredients';
 import MealPlan from '../MealPlan';
 import Navigation from './Navigation';
 import Recipes from '../Recipes';
@@ -15,13 +16,15 @@ class App extends Component {
     const { section } = this.props;
     return (
       <div className="container">
-        <h1>Hello!</h1>
         <Navigation />
         { section == 'mealPlan' && <MealPlan /> }
         { section == 'recipes' && <Recipes /> }
+        { section == 'ingredients' && <Ingredients /> }
       </div>
     )
   }
 }
 
-export default App;
+export default connect(state => ({
+  section: state.section,
+}))(App);
