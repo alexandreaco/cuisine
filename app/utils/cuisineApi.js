@@ -121,3 +121,23 @@ export const apiDeleteIngredient = (ingredient) => {
    });
   });
 }
+
+
+
+export const apiGetRecipes = () => {
+
+  return new Promise(resolve => {
+   const url = 'http://localhost:3000/recipes';
+
+   fetch(url)
+   .then(response => {
+     return response.json();
+   })
+   .then(json => {
+     resolve(json);
+   }).catch(error => {
+     log('Error: ', error);
+   });
+  });
+
+}

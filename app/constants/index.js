@@ -5,6 +5,11 @@ export const ADD_INGREDIENT = 'ADD_INGREDIENT';
 export const EDIT_INGREDIENT = 'EDIT_INGREDIENT';
 export const DELETE_INGREDIENT = 'DELETE_INGREDIENT';
 
+// Recipes
+
+export const GET_RECIPES = 'GET_RECIPES';
+
+
 // User Lifecycle
 
 export const SET_SECTION = 'SET_SECTION';

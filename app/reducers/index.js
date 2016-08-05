@@ -4,12 +4,14 @@ import {
   ADD_INGREDIENT,
   EDIT_INGREDIENT,
   DELETE_INGREDIENT,
+  GET_RECIPES,
   SET_SECTION,
   SET_VIEW,
 } from '../constants';
 
 const initialState = {
   ingredients: [],
+  recipes: [],
   section: 'mealPlan',
   view: 'default',
   ingredientCategories: [
@@ -40,6 +42,11 @@ export default handleActions({
   [DELETE_INGREDIENT]: (state, action) => ({
     ...state,
     ingredients: action.payload,
+  }),
+
+  [GET_RECIPES]: (state, action) => ({
+    ...state,
+    recipes: action.payload,
   }),
 
   [SET_SECTION]: (state, action) => ({

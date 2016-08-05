@@ -5,6 +5,7 @@ import {
   apiAddIngredient,
   apiEditIngredient,
   apiDeleteIngredient,
+  apiGetRecipes,
 } from '../utils/cuisineApi';
 
 import {
@@ -12,6 +13,7 @@ import {
   ADD_INGREDIENT,
   EDIT_INGREDIENT,
   DELETE_INGREDIENT,
+  GET_RECIPES,
   SET_SECTION,
   SET_VIEW,
 } from '../constants';
@@ -27,3 +29,5 @@ export const setView = createAction(SET_VIEW);
 export const editIngredient = createAction(EDIT_INGREDIENT, apiEditIngredient);
 
 export const deleteIngredient = createAction(DELETE_INGREDIENT, apiDeleteIngredient);
+
+export const getRecipes = createAction(GET_RECIPES, apiGetRecipes);
