@@ -1,0 +1,9 @@
+.icon {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+
+  &:hover {
+    color: $color-produce;
+  }
+}

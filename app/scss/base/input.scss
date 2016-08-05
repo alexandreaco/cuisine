@@ -1,0 +1,25 @@
+input[type=text],
+input[type=number] {
+  border: none;
+  box-shadow: none;
+  font-family: $font-family--body;
+  height: 100%;
+  outline: none;
+}
+
+.input-wrapper {
+  border: none;
+  box-shadow: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background-color: $color-text;
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+  }
+}

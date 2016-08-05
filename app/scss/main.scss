@@ -1,1 +1,54 @@
 // Variables
+
+$color-border: #F0F0F0;
+$color-text: #3C3C3C;
+$color-gray: #A3A3A3;
+$color-gray--light: #FAFAFA;
+$color-action: #005DA6;
+$color-menu: #FFCE02;
+$color-produce: #6FED98;
+$color-meat: #F57474;
+$color-fish: #6FEDE8;
+$color-grain: #F3EC73;
+$color-pantry: #F9DFF1;
+
+
+$font-family--headline: 'Mononoki';
+$font-size--headline: 16px;
+
+$font-family--body: 'Mononoki';
+$font-size--body: 12px;
+
+
+$max-width: 1120px;
+
+
+$base-duration: 300ms;
+$base-timing: ease;
+
+
+body {
+  color: $color-text;
+  font-family: $font-family--body;
+  font-size: $font-size--body;
+}
+
+h1 {
+  font-family: $font-family--headline;
+  font-size: $font-size--headline;
+}
+
+
+
+//---
+// Partials
+
+@import "base/buttons";
+@import "base/input";
+@import "base/headings";
+
+@import "modules/layout";
+@import "modules/ingredients";
+@import "modules/ingredient";
+@import "modules/navigation";
+@import "modules/icon";
