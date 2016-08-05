@@ -16,6 +16,9 @@ $color-pantry: #F9DFF1;
 $font-family--headline: 'Mononoki';
 $font-size--headline: 16px;
 
+$font-family--subhead: 'Mononoki';
+$font-size--subhead: 16px;
+
 $font-family--body: 'Mononoki';
 $font-size--body: 12px;
 
@@ -50,5 +53,6 @@ h1 {
 @import "modules/layout";
 @import "modules/ingredients";
 @import "modules/ingredient";
+@import "modules/recipes";
 @import "modules/navigation";
 @import "modules/icon";

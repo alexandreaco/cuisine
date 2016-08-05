@@ -5,6 +5,7 @@ import {
   EDIT_INGREDIENT,
   DELETE_INGREDIENT,
   GET_RECIPES,
+  SET_ACTIVE_RECIPE,
   SET_SECTION,
   SET_VIEW,
 } from '../constants';
@@ -19,7 +20,8 @@ const initialState = {
     'meat',
     'nuts',
     'grain',
-  ]
+  ],
+  activeRecipe: {},
 };
 
 export default handleActions({
@@ -47,6 +49,11 @@ export default handleActions({
   [GET_RECIPES]: (state, action) => ({
     ...state,
     recipes: action.payload,
+  }),
+
+  [SET_ACTIVE_RECIPE]: (state, action) => ({
+    ...state,
+    activeRecipe: action.payload,
   }),
 
   [SET_SECTION]: (state, action) => ({

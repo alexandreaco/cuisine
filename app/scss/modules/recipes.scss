@@ -1,0 +1,31 @@
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipes__header {
+  width: 100%;
+}
+
+.recipes__list {
+  width: 50%;
+}
+
+.recipe__active {
+  width: 50%;
+}
+
+
+.recipe__name {
+  font-family: $font-family--subhead;
+  font-size: $font-size--subhead;
+  margin-bottom: 10px;
+}
+
+.recipe__listItem {
+  margin-bottom: 25px;
+}
+
+.recipe__ingredients {
+  margin-top: 20px;
+}

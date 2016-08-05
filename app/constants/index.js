@@ -8,6 +8,7 @@ export const DELETE_INGREDIENT = 'DELETE_INGREDIENT';
 // Recipes
 
 export const GET_RECIPES = 'GET_RECIPES';
+export const SET_ACTIVE_RECIPE = 'SET_ACTIVE_RECIPE';
 
 
 // User Lifecycle

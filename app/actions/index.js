@@ -14,6 +14,7 @@ import {
   EDIT_INGREDIENT,
   DELETE_INGREDIENT,
   GET_RECIPES,
+  SET_ACTIVE_RECIPE,
   SET_SECTION,
   SET_VIEW,
 } from '../constants';
@@ -27,6 +28,8 @@ export const setSection = createAction(SET_SECTION);
 export const setView = createAction(SET_VIEW);
 
 export const editIngredient = createAction(EDIT_INGREDIENT, apiEditIngredient);
+
+export const setActiveRecipe = createAction(SET_ACTIVE_RECIPE);
 
 export const deleteIngredient = createAction(DELETE_INGREDIENT, apiDeleteIngredient);
 

@@ -2,16 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Recipe from '../Recipe';
-import { getRecipes } from '../../../actions';
 
 class RecipesList extends Component {
 
   constructor() {
     super();
-  }
-
-  componentDidMount() {
-    this.props.dispatch(getRecipes());
   }
 
   render() {
@@ -31,6 +26,4 @@ class RecipesList extends Component {
   }
 }
 
-export default connect(state => ({
-  recipes: state.recipes,
-}))(RecipesList);
+export default connect()(RecipesList);
