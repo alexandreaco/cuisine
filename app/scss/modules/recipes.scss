@@ -29,3 +29,25 @@
 .recipe__ingredients {
   margin-top: 20px;
 }
+
+
+.recipe__new {
+  margin: 20px 0 0 0;
+
+  .input-wrapper,
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  textarea {
+    height: 350px;
+    border: none;
+    font-family: $font-family--body;
+  }
+}
+
+.recipe__new__buttons {
+  margin-top: 50px;
+  text-align: right;
+}

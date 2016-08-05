@@ -9,6 +9,7 @@ export const DELETE_INGREDIENT = 'DELETE_INGREDIENT';
 
 export const GET_RECIPES = 'GET_RECIPES';
 export const SET_ACTIVE_RECIPE = 'SET_ACTIVE_RECIPE';
+export const ADD_RECIPE = 'ADD_RECIPE';
 
 
 // User Lifecycle

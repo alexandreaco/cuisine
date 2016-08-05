@@ -6,6 +6,7 @@ import {
   DELETE_INGREDIENT,
   GET_RECIPES,
   SET_ACTIVE_RECIPE,
+  ADD_RECIPE,
   SET_SECTION,
   SET_VIEW,
 } from '../constants';
@@ -54,6 +55,11 @@ export default handleActions({
   [SET_ACTIVE_RECIPE]: (state, action) => ({
     ...state,
     activeRecipe: action.payload,
+  }),
+
+  [ADD_RECIPE]: (state, action) => ({
+    ...state,
+    recipes: action.payload,
   }),
 
   [SET_SECTION]: (state, action) => ({

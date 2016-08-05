@@ -139,5 +139,38 @@ export const apiGetRecipes = () => {
      log('Error: ', error);
    });
   });
+}
 
+
+
+export const apiAddRecipe = (newRecipe) => {
+
+  const { name, content, ingredients } = newRecipe;
+
+  return new Promise(resolve => {
+   const url = 'http://localhost:3000/addRecipe';
+   const request = new Request(url, {
+  	method: 'POST',
+  	mode: 'cors',
+  	redirect: 'follow',
+  	headers: new Headers({
+  		'Content-Type': 'application/json'
+  	}),
+    body: JSON.stringify({
+      'name': name,
+      'content': content,
+      'ingredients': ingredients,
+    })
+  });
+
+   fetch(request)
+   .then(response => {
+     return response.json();
+   })
+   .then(json => {
+     resolve(json);
+   }).catch(error => {
+     log('Error: ', error);
+   });
+  });
 }

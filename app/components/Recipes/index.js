@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import RecipesList from './RecipesList';
 import ActiveRecipe from './ActiveRecipe';
 import RecipeButtons from './RecipeButtons';
+import NewRecipe from './NewRecipe';
 
 import { getRecipes, setActiveRecipe } from '../../actions';
 
@@ -26,8 +27,15 @@ class Recipes extends Component {
         </div>
         <RecipesList recipes={recipes} />
           <div className="recipes__actionArea">
-            <RecipeButtons />
-            { view != 'addRecipe' && <ActiveRecipe /> }
+
+            { view != 'addRecipe' && (
+              <div>
+                <RecipeButtons />
+                <ActiveRecipe />
+              </div>
+            )}
+
+            { view == 'addRecipe' && <NewRecipe /> }
           </div>
       </div>
     )

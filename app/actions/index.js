@@ -6,6 +6,7 @@ import {
   apiEditIngredient,
   apiDeleteIngredient,
   apiGetRecipes,
+  apiAddRecipe,
 } from '../utils/cuisineApi';
 
 import {
@@ -15,6 +16,7 @@ import {
   DELETE_INGREDIENT,
   GET_RECIPES,
   SET_ACTIVE_RECIPE,
+  ADD_RECIPE,
   SET_SECTION,
   SET_VIEW,
 } from '../constants';
@@ -34,3 +36,5 @@ export const setActiveRecipe = createAction(SET_ACTIVE_RECIPE);
 export const deleteIngredient = createAction(DELETE_INGREDIENT, apiDeleteIngredient);
 
 export const getRecipes = createAction(GET_RECIPES, apiGetRecipes);
+
+export const addRecipe = createAction(ADD_RECIPE, apiAddRecipe);
