@@ -61,3 +61,8 @@
   border: none;
   font-family: $font-family--body;
 }
+
+.recipe__ingredient-preview {
+  display: flex;
+  justify-content: space-between;
+}

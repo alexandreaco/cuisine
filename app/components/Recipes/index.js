@@ -6,7 +6,11 @@ import ActiveRecipe from './ActiveRecipe';
 import RecipeButtons from './RecipeButtons';
 import NewRecipe from './NewRecipe';
 
-import { getRecipes, setActiveRecipe } from '../../actions';
+import {
+  getRecipes,
+  setActiveRecipe,
+  getIngredients,
+} from '../../actions';
 
 class Recipes extends Component {
 
@@ -16,6 +20,7 @@ class Recipes extends Component {
 
   componentDidMount() {
     this.props.dispatch(getRecipes());
+    this.props.dispatch(getIngredients())
   }
 
   render() {
