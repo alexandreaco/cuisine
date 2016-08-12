@@ -19,7 +19,7 @@ class Recipes extends Component {
   }
 
   render() {
-    const { recipes, view } = this.props;
+    const { recipes, view, activeRecipe } = this.props;
     return (
       <div className="recipes">
         <div className="recipes__header">
@@ -31,7 +31,7 @@ class Recipes extends Component {
             { view != 'addRecipe' && (
               <div>
                 <RecipeButtons />
-                <ActiveRecipe />
+                { Object.keys(activeRecipe).length > 0 && <ActiveRecipe /> }
               </div>
             )}
 
@@ -45,4 +45,5 @@ class Recipes extends Component {
 export default connect(state => ({
   recipes: state.recipes,
   view: state.view,
+  activeRecipe: state.activeRecipe,
 }))(Recipes);
