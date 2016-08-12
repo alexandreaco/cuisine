@@ -35,19 +35,29 @@
   margin: 20px 0 0 0;
 
   .input-wrapper,
-  input,
-  textarea {
+  input {
     width: 100%;
-  }
-
-  textarea {
-    height: 350px;
-    border: none;
-    font-family: $font-family--body;
   }
 }
 
 .recipe__new__buttons {
   margin-top: 50px;
   text-align: right;
+}
+
+
+.recipe__content .input-wrapper {
+  display: flex;
+}
+
+.recipe__editor,
+.recipe__preview {
+  width: 50%;
+  padding: 20px 10px 15px 10px;
+}
+
+.recipe__editor {
+  height: 350px;
+  border: none;
+  font-family: $font-family--body;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+var marked = require('marked');
 
 import {
   setView,
@@ -10,6 +11,9 @@ class NewRecipe extends Component {
 
   constructor() {
     super();
+    this.state = {
+      text: ''
+    }
   }
 
   saveRecipe() {
@@ -22,6 +26,13 @@ class NewRecipe extends Component {
 
   cancel() {
     this.props.dispatch(setView('default'));
+  }
+
+  handleEdit = ({target}) => {
+    const val = target.value;
+    this.setState({
+      text: val
+    });
   }
 
   render() {
@@ -41,10 +52,18 @@ class NewRecipe extends Component {
 
             <span className="input-wrapper">
               <textarea
-                className="recipe__content"
+                className="recipe__editor"
                 ref="newRecipe__content"
-                placeholder="Enter instructions here..." />
-              </span>
+                placeholder="Enter instructions here..."
+                onInput={ this.handleEdit }
+              />
+
+              <div className="recipe__preview"
+                  dangerouslySetInnerHTML={{
+                    __html: marked(this.state.text) }}>
+              </div>
+
+            </span>
 
           </div>
         </div>
